@@ -1,18 +1,20 @@
-package testejb.persistance;
+package testejb.persistence;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "e_order", schema = "public", catalog = "postgres")
-public class EOrderEntity {
+public class EOrderEntity implements Serializable {
     private Integer orderId;
     private String orderNumber;
     private Double sum;
     private String description;
-    private String currency;
+    private CurrencyEntity currency;
 
     @Id
     @Column(name = "order_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Integer getOrderId() {
         return orderId;
     }
@@ -53,11 +55,12 @@ public class EOrderEntity {
 
     @Basic
     @Column(name = "currency", nullable = false)
-    public String getCurrency() {
+    public CurrencyEntity getCurrency() {
         return currency;
     }
 
-    public void setCurrency(String currency) {
+
+    public void setCurrency(CurrencyEntity currency) {
         this.currency = currency;
     }
 

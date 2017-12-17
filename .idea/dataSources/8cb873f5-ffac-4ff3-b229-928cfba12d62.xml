@@ -9,36 +9,36 @@
     </database>
     <schema id="3" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2017-12-16.19:10:50.435</IntrospectionTimestamp>
-      <IntrospectionStateNumber>593</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2017-12-17.18:37:25.635</IntrospectionTimestamp>
+      <IntrospectionStateNumber>596</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
     <schema id="4" parent="2" name="pg_catalog">
       <ObjectId>11</ObjectId>
-      <IntrospectionTimestamp>2017-12-16.19:10:50.435</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-12-17.16:27:06.121</IntrospectionTimestamp>
       <IntrospectionStateNumber>541</IntrospectionStateNumber>
       <Visible>1</Visible>
     </schema>
     <schema id="5" parent="2" name="pg_toast">
       <ObjectId>99</ObjectId>
-      <IntrospectionTimestamp>2017-12-16.19:10:50.435</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-12-17.16:27:06.121</IntrospectionTimestamp>
       <IntrospectionStateNumber>592</IntrospectionStateNumber>
       <Visible>1</Visible>
     </schema>
     <schema id="6" parent="2" name="pg_temp_1">
       <ObjectId>11848</ObjectId>
-      <IntrospectionTimestamp>2017-12-16.19:10:50.435</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-12-17.16:27:06.121</IntrospectionTimestamp>
       <Visible>1</Visible>
     </schema>
     <schema id="7" parent="2" name="pg_toast_temp_1">
       <ObjectId>11849</ObjectId>
-      <IntrospectionTimestamp>2017-12-16.19:10:50.435</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-12-17.16:27:06.121</IntrospectionTimestamp>
       <Visible>1</Visible>
     </schema>
     <schema id="8" parent="2" name="information_schema">
       <ObjectId>12155</ObjectId>
-      <IntrospectionTimestamp>2017-12-16.19:10:50.435</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2017-12-17.16:27:06.121</IntrospectionTimestamp>
       <IntrospectionStateNumber>539</IntrospectionStateNumber>
       <Visible>1</Visible>
     </schema>
@@ -58,7 +58,7 @@ USD</Labels>
     </object-type>
     <table id="11" parent="3" name="e_order">
       <ObjectId>16391</ObjectId>
-      <StateNumber>592</StateNumber>
+      <StateNumber>596</StateNumber>
     </table>
     <object-type id="12" parent="4" name="bool">
       <ObjectId>16</ObjectId>
@@ -27375,22 +27375,22 @@ USD</Labels>
       <NotNull>1</NotNull>
       <StateNumber>592</StateNumber>
     </column>
-    <column id="3852" parent="11" name="sum">
-      <Position>3</Position>
-      <DataType>money|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>592</StateNumber>
-    </column>
-    <column id="3853" parent="11" name="description">
+    <column id="3852" parent="11" name="description">
       <Position>4</Position>
       <DataType>text|0</DataType>
       <StateNumber>592</StateNumber>
     </column>
-    <column id="3854" parent="11" name="currency">
+    <column id="3853" parent="11" name="currency">
       <Position>5</Position>
-      <DataType>currency|0</DataType>
+      <DataType>varchar(3)|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>592</StateNumber>
+      <StateNumber>594</StateNumber>
+    </column>
+    <column id="3854" parent="11" name="sum">
+      <Position>6</Position>
+      <DataType>double precision|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>596</StateNumber>
     </column>
     <index id="3855" parent="11" name="e_order_order_id_uindex">
       <ObjectId>16400</ObjectId>
