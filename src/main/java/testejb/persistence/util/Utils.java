@@ -33,7 +33,7 @@ public class Utils {
         List<EOrderEntity> orders = null;
 
         try {
-//TODO might be a problem here
+
             setUp();
             EntityManager entityManager = entityManagerFactory.createEntityManager();
             orders = entityManager.createQuery(
@@ -59,8 +59,6 @@ public class Utils {
             entityManager.getTransaction().commit();
             entityManager.close();
 
-        } catch (NullPointerException e) {
-            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
