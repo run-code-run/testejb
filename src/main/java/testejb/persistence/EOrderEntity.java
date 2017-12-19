@@ -6,6 +6,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "e_order", schema = "public", catalog = "postgres")
 public class EOrderEntity implements Serializable {
+    private static final long serialVersionUID = 2822798487527544682L;
     private Integer orderId;
     private String orderNumber;
     private Double sum;
