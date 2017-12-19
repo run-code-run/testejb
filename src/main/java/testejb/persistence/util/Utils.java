@@ -2,8 +2,6 @@ package testejb.persistence.util;
 
 import testejb.persistence.EOrderEntity;
 
-import javax.ejb.TransactionAttribute;
-import javax.ejb.TransactionAttributeType;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
@@ -48,19 +46,9 @@ public class Utils {
     }
 
 
-    @TransactionAttribute(TransactionAttributeType.REQUIRED)
     public void saveToDB(EOrderEntity eOrder) {
 
-        try {
-            setUp();
-            EntityManager entityManager = entityManagerFactory.createEntityManager();
-            entityManager.getTransaction().begin();
-            entityManager.persist(eOrder);
-            entityManager.getTransaction().commit();
-            entityManager.close();
+        new MessageSender().sendToQueue(eOrder);
 
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }
