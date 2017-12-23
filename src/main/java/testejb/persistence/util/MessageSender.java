@@ -10,8 +10,6 @@ import javax.naming.NamingException;
 public class MessageSender {
 
 
-    //TODO прописать ебучего юзера в сессию
-
     public void sendToQueue(EOrderEntity entity) {
 
         try {
@@ -22,15 +20,10 @@ public class MessageSender {
             Connection connection = connectionFactory.createConnection();
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             MessageProducer producer = session.createProducer(queue);
-//            ObjectMessage message = session.createObjectMessage(entity);
-            /*ObjectMessage message = session.createObjectMessage();
-            message.setObject(eOrder);*/
 
             connection.start();
 
-//            TextMessage message = session.createTextMessage("Hello!");
             ObjectMessage om = session.createObjectMessage(entity);
-
 
             producer.send(om);
             connection.close();
