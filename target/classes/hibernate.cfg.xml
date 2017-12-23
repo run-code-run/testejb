@@ -5,12 +5,12 @@
 <hibernate-configuration>
     <session-factory>
 
-        <!--<property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>-->
         <property name="hibernate.connection.datasource">java:jboss/datasources/PostgreDataSource</property>
         <property name="connection.driver_class">org.postgresql.Driver</property>
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
         <property name="current_session_context_class">thread</property>
-        <mapping class="testejb.persistence.EOrderEntity"/>
+        <mapping class="persistence.EOrderEntity"/>
+
 
 
     </session-factory>

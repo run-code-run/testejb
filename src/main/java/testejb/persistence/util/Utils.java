@@ -1,6 +1,6 @@
 package testejb.persistence.util;
 
-import testejb.persistence.EOrderEntity;
+import persistence.EOrderEntity;
 
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;

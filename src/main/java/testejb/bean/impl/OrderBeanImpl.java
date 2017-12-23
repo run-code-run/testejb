@@ -1,7 +1,7 @@
 package testejb.bean.impl;
 
 import testejb.bean.OrderBean;
-import testejb.persistence.EOrderEntity;
+import persistence.EOrderEntity;
 import testejb.persistence.util.Utils;
 
 import javax.ejb.Remote;

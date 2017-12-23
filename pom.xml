@@ -50,41 +50,6 @@
         </dependency>
 
 
-
-        <!--
-
-                &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate &ndash;&gt;
-                <dependency>
-                    <groupId>org.hibernate</groupId>
-                    <artifactId>hibernate</artifactId>
-                    <version>3.5.4-Final</version>
-                    <type>pom</type>
-                </dependency>
-        -->
-
-
-<!--
-
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager &ndash;&gt;
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.2.12.Final</version>
-        </dependency>
--->
-<!--
-
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager &ndash;&gt;
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>3.3.2.GA</version>
-            <type>pom</type>
-        </dependency>
-
-
--->
-
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-annotations</artifactId>
@@ -97,17 +62,13 @@
             <version>1.0</version>
         </dependency>
 
-<!--
 
-        &lt;!&ndash; https://mvnrepository.com/artifact/org.hibernate/ejb3-persistence &ndash;&gt;
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>ejb3-persistence</artifactId>
-            <version>1.0.2.GA</version>
-            <type>pom</type>
+            <groupId>entity-model</groupId>
+            <artifactId>entity-model</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
         </dependency>
-
--->
 
         <dependency>
             <groupId>org.hibernate</groupId>

@@ -1,7 +1,7 @@
 package testejb.bean;
 
 
-import testejb.persistence.EOrderEntity;
+import persistence.EOrderEntity;
 
 import javax.ejb.Remote;
 import java.rmi.RemoteException;

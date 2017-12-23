@@ -10,9 +10,6 @@
       <user-name>postgres</user-name>
       <introspection-schemas>postgres:*</introspection-schemas>
     </data-source>
-    <data-source name="hibernate.cfg.xml/Hibernate" uuid="a2b85f1f-e7b8-4d48-a849-982583193f67">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-    </data-source>
     <data-source name="myapp/Hibernate" uuid="ca998556-dc27-45e0-82fb-0cc00a5bf74e">
       <database-info product="PostgreSQL" version="9.6.6" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.1.1">
         <identifier-quote-string>&quot;</identifier-quote-string>

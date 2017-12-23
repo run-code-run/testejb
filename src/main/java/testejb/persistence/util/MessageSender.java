@@ -1,6 +1,6 @@
 package testejb.persistence.util;
 
-import testejb.persistence.EOrderEntity;
+import persistence.EOrderEntity;
 
 import javax.jms.*;
 import javax.naming.InitialContext;
@@ -16,8 +16,6 @@ public class MessageSender {
 
         try {
 
-            EOrderEntity model = entity;
-
             InitialContext initialContext = new InitialContext();
             ConnectionFactory connectionFactory = (ConnectionFactory) initialContext.lookup("java:jboss/exported/jms/RemoteConnectionFactory");
             Queue queue = (Queue) initialContext.lookup("java:/jms/queue/txrequest");
@@ -25,15 +23,18 @@ public class MessageSender {
             Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
             MessageProducer producer = session.createProducer(queue);
 //            ObjectMessage message = session.createObjectMessage(entity);
-            ObjectMessage message = session.createObjectMessage();
-            message.setObject(model);
+            /*ObjectMessage message = session.createObjectMessage();
+            message.setObject(eOrder);*/
 
             connection.start();
 
 //            TextMessage message = session.createTextMessage("Hello!");
+            ObjectMessage om = session.createObjectMessage(entity);
 
-            producer.send(message);
+
+            producer.send(om);
             connection.close();
+
 
         } catch (NamingException | JMSException e) {
             e.printStackTrace();
