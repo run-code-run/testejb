@@ -8,9 +8,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <non-jta-data-source>java:jboss/datasources/PostgreDataSource</non-jta-data-source>
 
-        <class>persistence.EOrderEntity</class>
-        <class>persistence.CurrencyEntity</class>
-
+        <class>entities.EOrderEntity</class>
 
         <properties>
 

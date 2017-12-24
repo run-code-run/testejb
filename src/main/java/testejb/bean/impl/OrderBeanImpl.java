@@ -1,8 +1,9 @@
 package testejb.bean.impl;
 
 import testejb.bean.OrderBean;
-import persistence.EOrderEntity;
-import testejb.persistence.util.Utils;
+import entities.EOrderEntity;
+import testejb.tools.MessageSender;
+
 
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
@@ -26,7 +27,7 @@ public class OrderBeanImpl implements OrderBean {
     @Override
     public int addOrder(EOrderEntity eOrder) {
 
-        new Utils().saveToDB(eOrder);
+        new MessageSender().sendToQueue(eOrder);
 
         return 0;
     }

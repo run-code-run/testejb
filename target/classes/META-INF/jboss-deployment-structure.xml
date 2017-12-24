@@ -5,7 +5,12 @@
         <dependencies>
            <!-- <module name="org.jboss.as.ejb3" export="true"/>
             <module name="org.apache.activemq.artemis"/>-->
-            <module name="org.entity"/>
+            <module name="org.entity" export="true"/>
+            <module name="javax.api" export="true"/>
+            <module name="javax.ejb.api" export="true"/>
+            <module name="javax.faces.api"/>
+            <module name="org.jboss.jandex"/>
+            <!--<module name="org.hibernate" export="true"/>-->
         </dependencies>
     </deployment>
 </jboss-deployment-structure>

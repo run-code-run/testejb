@@ -1,6 +1,6 @@
-package testejb.persistence.util;
+package testejb.tools;
 
-import persistence.EOrderEntity;
+import entities.EOrderEntity;
 
 import javax.jms.*;
 import javax.naming.InitialContext;
